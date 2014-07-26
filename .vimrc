@@ -1,0 +1,36 @@
+" Turn tabs into spaces
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+" Display
+set colorcolumn=80
+set number
+
+" Manage backups and swap files in a central location
+" NOTE: vim doesn't create the directories, they need to be manually created:
+" mkdir -p ~/.vim/backup
+" mkdir -p ~/.vim/tmp
+set backup
+set backupdir=~/.vim/backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+" Persistent undo.
+" NOTE: vim doesn't create the directories, they need to be manually created:
+" mkdir -p ~/.vim/undodir
+set undofile
+set undodir=~/.vim/undodir
+
+" Highlight the current line
+set cursorline
+highlight CursorLine term=None cterm=None ctermbg=0
+
+" 256-jungle changes something that makes wombat display better.
+" I have no idea why.
+colorscheme 256-jungle
+colorscheme wombat256mod
+
+" Set font in gvim only
+set guifont=Consolas\ 10
+
