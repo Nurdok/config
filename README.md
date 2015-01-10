@@ -1,4 +1,4 @@
-config
+.files
 ======
 
-various configurations
+Various configuration files, such as vimrc, bashrc, etc.
