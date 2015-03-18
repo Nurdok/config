@@ -34,3 +34,6 @@ colorscheme wombat256mod
 " Set font in gvim only
 set guifont=Consolas\ 10
 
+" Comforable editing
+set scrolloff=8
+
