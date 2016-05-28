@@ -1,0 +1,12 @@
+---
+- name: configure zsh
+  hosts: all
+
+  tasks:
+  - name: install zsh
+    apt: name=zsh state=present
+    
+  - name: install oh-my-zsh
+    shell: "sh -c \"$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\""
+    args:
+      creates: ~/.oh_my_zsh
