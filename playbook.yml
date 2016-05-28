@@ -1,12 +1,26 @@
 ---
 - name: configure zsh
-  hosts: all
+  hosts: 127.0.0.1
+  connection: local
 
   tasks:
   - name: install zsh
     apt: name=zsh state=present
+    become: true
+
+  - name: install git (required for oh-my-zsh)
+    apt: name=git state=present
+    become: true
     
   - name: install oh-my-zsh
     shell: "sh -c \"$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\""
     args:
       creates: ~/.oh_my_zsh
+ 
+  - name: set zsh theme
+    blockinfile: 
+      dest: ~/.zshrc
+      insertbefore: "source $ZSH/oh-my-zsh.sh"
+      marker: "# dotfiles: set zsh theme"
+      block: |
+        ZSH_THEME="blinks"
