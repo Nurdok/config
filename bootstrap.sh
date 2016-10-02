@@ -1,7 +1,7 @@
 set -e
 set -x
 
-sudo apt-get install git
+sudo apt-get install git python-pip
 sudo pip install ansible
 
 mkdir -p ~/code
