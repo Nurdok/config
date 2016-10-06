@@ -1,7 +1,7 @@
 set -e
 set -x
 
-sudo apt-get install git python-pip libssl-dev
+sudo apt-get install git python-pip libssl-dev python-dev
 sudo pip install --upgrade pip wheel ansible
 
 mkdir -p ~/code
