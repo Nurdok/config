@@ -61,7 +61,7 @@
   - name: vimrc
     blockinfile: 
       dest: ~/.vimrc
-      marker: "\" {mark} {{ item.description }}"
+      marker: "\n\" {mark} {{ item.description }}\n"
       create: "yes"
       block: "{{ item.text }}\n"
     with_items:
@@ -74,7 +74,6 @@
 
       - description: "display"
         text: |
-          " Display
           set colorcolumn=80
           set number
           " Highlight the current line
@@ -110,6 +109,11 @@
           " mkdir -p ~/.vim/undodir
           set undofile
           set undodir=~/.vim/undodir
+      - description: "shortcuts"
+        text: |
+          " Newline without insert mode
+          nmap oo o<Esc>k
+          nmap OO O<Esc>j
 
 - name: configure virtualenv
   hosts: 127.0.0.1
