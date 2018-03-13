@@ -114,6 +114,11 @@
           " Newline without insert mode
           nmap oo o<Esc>k
           nmap OO O<Esc>j
+      - description: "directory shortcut"
+        text: |
+          " To edit a file from the same dir as the one in the current buffer, do ":e %%/"
+          cabbr <expr> %% expand('%:p:h')
+
 
 - name: configure virtualenv
   hosts: 127.0.0.1
