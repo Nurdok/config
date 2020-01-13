@@ -2,7 +2,7 @@ set -e
 set -x
 
 sudo apt-get update
-sudo apt-get install git python-pip libssl-dev python-dev
+sudo apt-get install git python-pip libssl-dev python-dev build-essential libffi-dev
 sudo pip install --upgrade pip wheel setuptools
 sudo pip install --upgrade ansible
 
