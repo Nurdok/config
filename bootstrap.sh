@@ -3,7 +3,7 @@ set -x
 
 sudo apt-get update
 sudo apt-get install git python-pip libssl-dev python-dev
-sudo pip install --upgrade pip wheel ansible
+sudo pip install --upgrade pip wheel ansible setuptools
 
 mkdir -p ~/code
 # Using HTTPS to avoid RSA key fingerprint prompt
